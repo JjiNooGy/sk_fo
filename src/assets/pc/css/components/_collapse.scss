@@ -1,0 +1,22 @@
+.collapse-wrap {
+  .collapse-btn {
+    border: 1px solid #ddd;
+    padding: 30px;
+  }
+  .collapse-content {
+    overflow: hidden;
+    height: 0;
+  }
+}
+.collapse-wrap.active {
+  .collapse-btn {
+  }
+  .collapse-content {
+    display: inline-block;
+    width: 100%;
+    height: unset;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #d4d7dc;
+  }
+}

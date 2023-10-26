@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, inital-scale=1.0" />
+
+    <title>게시판 샘플</title>
+    <link rel="stylesheet" type="text/css" href="../../../assets/pc/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="list.css" />
+
+    <script src="include.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+    <style>
+      .btn-open-pop {
+        background: linear-gradient(70deg, #ff7d00 -1%, #f35b5b 37%, #fe532d 116.61%);
+        color: #fff;
+        padding: 8px 24px;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 18px;
+      }
+    </style>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- headerWrap -->
+      <div class="header_wrap" w3-include-html="./include/header.html"></div>
+      <!-- headerWrap -->
+
+      <main>
+        <article>
+          <section>
+            <div class="page-title">
+              <h2 class="title">팝업</h2>
+              <p class="title-desc">팝업은 body태그 다음에 기술 합니다.</p>
+            </div>
+          </section>
+
+          <section>
+            <div class="title-wrap">
+              <h3 class="title">레이어팝업</h3>
+              <p class="title-desc">팝업 가로사이즈는 w-xs(400px), w-sm(540px), w-md(880px), w-lg(1080px) 로 구분.<br />팝업 가로사이즈는 사이트별 지정해서 사용.</p>
+            </div>
+
+            <button data-rel="#pop-01" class="open-pop btn-open-pop">레이어 팝업 버튼</button>
+
+            <pre class="theme-codepen-embed">
+              <code class="language-html">&#x3C;!-- &#xB808;&#xC774;&#xC5B4;&#xD31D;&#xC5C5; --&#x3E;
+&#x3C;div class=&#x22;popup-wrap w-lg&#x22; id=&#x22;pop-01&#x22;&#x3E;
+  &#x3C;div class=&#x22;pop-box&#x22;&#x3E;
+    &#x3C;div class=&#x22;pop-header&#x22;&#x3E;
+      &#x3C;h2&#x3E;&#x3C;span class=&#x22;hide-txt&#x22;&#x3E;&#xBE44;&#xBC00;&#xBC88;&#xD638; &#xC7AC;&#xC124;&#xC815;&#x3C;/span&#x3E;&#x3C;/h2&#x3E;
+      &#x3C;button class=&#x22;pop-close btn-close&#x22;&#x3E;&#x3C;span class=&#x22;hide-txt&#x22;&#x3E;&#xD31D;&#xC5C5;&#xB2EB;&#xAE30;&#x3C;/span&#x3E;&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;!-- &#xD31D;&#xC5C5;&#xD558;&#xB2E8;&#xBC84;&#xD2BC;&#xC601;&#xC5ED; --&#x3E;
+    &#x3C;div class=&#x22;pop-footer&#x22;&#x3E;
+      &#x3C;div class=&#x22;btn-wrap&#x22;&#x3E;
+        &#x3C;div class=&#x22;btn-box&#x22;&#x3E;
+          &#x3C;button class=&#x22;btn-gray&#x22;&#x3E;gray&#x3C;/button&#x3E;
+          &#x3C;button class=&#x22;btn-primary&#x22;&#x3E;primary&#x3C;/button&#x3E;
+        &#x3C;/div&#x3E;
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;!-- //&#xD31D;&#xC5C5;&#xD558;&#xB2E8;&#xBC84;&#xD2BC;&#xC601;&#xC5ED; --&#x3E;
+    &#x3C;!-- &#xD31D;&#xC5C5;&#xCEE8;&#xD150;&#xCE20;&#xC601;&#xC5ED; --&#x3E;
+    &#x3C;div class=&#x22;pop-content&#x22;&#x3E;
+     
+    &#x3C;/div&#x3E;
+    &#x3C;!-- //&#xD31D;&#xC5C5;&#xCEE8;&#xD150;&#xCE20;&#xC601;&#xC5ED; --&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!-- //&#xB808;&#xC774;&#xC5B4;&#xD31D;&#xC5C5; --&#x3E;</code>
+            </pre>
+          </section>
+
+          <section>
+            <div class="title-wrap">
+              <h3 class="title">메인팝업</h3>
+            </div>
+
+            <button data-rel="#pop-02" class="open-pop btn-open-pop">메인 팝업 버튼</button>
+
+            <pre class="theme-codepen-embed">
+              <code class="language-html">&#x3C;&#x21;&#x2D;&#x2D;&#x20;&#xBA54;&#xC778;&#xD31D;&#xC5C5;&#x20;&#x2D;&#x2D;&#x3E;&#xA;&#x3C;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&#x3D;&#x22;&#x70;&#x6F;&#x70;&#x75;&#x70;&#x2D;&#x77;&#x72;&#x61;&#x70;&#x20;&#x70;&#x6F;&#x70;&#x2D;&#x6D;&#x61;&#x69;&#x6E;&#x20;&#x6C;&#x6F;&#x61;&#x64;&#x2D;&#x70;&#x6F;&#x70;&#x22;&#x20;&#x69;&#x64;&#x3D;&#x22;&#x70;&#x6F;&#x70;&#x2D;&#x30;&#x32;&#x22;&#x3E;&#xA;&#x20;&#x20;&#x3C;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&#x3D;&#x22;&#x70;&#x6F;&#x70;&#x2D;&#x62;&#x6F;&#x78;&#x22;&#x3E;&#xA;&#x20;&#x20;&#x20;&#x20;&#x3C;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&#x3D;&#x22;&#x70;&#x6F;&#x70;&#x2D;&#x63;&#x6F;&#x6E;&#x74;&#x65;&#x6E;&#x74;&#x22;&#x3E;&#x3C;&#x2F;&#x64;&#x69;&#x76;&#x3E;&#xA;&#xA;&#x20;&#x20;&#x20;&#x20;&#x3C;&#x64;&#x69;&#x76;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&#x3D;&#x22;&#x6D;&#x61;&#x69;&#x6E;&#x2D;&#x62;&#x74;&#x6E;&#x2D;&#x62;&#x6F;&#x78;&#x22;&#x3E;&#xA;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x3C;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&#x3D;&#x22;&#x62;&#x74;&#x6E;&#x2D;&#x74;&#x6F;&#x64;&#x61;&#x79;&#x2D;&#x63;&#x6C;&#x6F;&#x73;&#x65;&#x22;&#x3E;&#x3C;&#x69;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&#x3D;&#x22;&#x69;&#x63;&#x6F;&#x6E;&#x22;&#x3E;&#x3C;&#x2F;&#x69;&#x3E;&#xC624;&#xB298;&#x20;&#xD558;&#xB8E8;&#x20;&#xBCF4;&#xC9C0;&#xC54A;&#xAE30;&#x3C;&#x2F;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&#x3E;&#xA;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x3C;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&#x20;&#x63;&#x6C;&#x61;&#x73;&#x73;&#x3D;&#x22;&#x70;&#x6F;&#x70;&#x2D;&#x63;&#x6C;&#x6F;&#x73;&#x65;&#x22;&#x3E;&#xB2EB;&#xAE30;&#x3C;&#x2F;&#x62;&#x75;&#x74;&#x74;&#x6F;&#x6E;&#x3E;&#xA;&#x20;&#x20;&#x20;&#x20;&#x3C;&#x2F;&#x64;&#x69;&#x76;&#x3E;&#xA;&#x20;&#x20;&#x3C;&#x2F;&#x64;&#x69;&#x76;&#x3E;&#xA;&#x3C;&#x2F;&#x64;&#x69;&#x76;&#x3E;&#xA;&#x3C;&#x21;&#x2D;&#x2D;&#x20;&#x2F;&#x2F;&#xBA54;&#xC778;&#xD31D;&#xC5C5;&#x20;&#x2D;&#x2D;&#x3E;</code>
+            </pre>
+          </section>
+
+          <section>
+            <div class="title-wrap">
+              <h3 class="title">얼럿팝업</h3>
+              <!-- <p class="title-desc">팝업 가로사이즈는 w-xs(400px), w-sm(540px), w-md(880px), w-lg(1080px) 로 구분.<br />팝업 가로사이즈는 사이트별 지정해서 사용.</p> -->
+            </div>
+
+            <button data-rel="#alert" class="open-pop btn-open-pop">얼럿 버튼</button>
+
+            <pre class="theme-codepen-embed">
+              <code class="language-html">&#x3C;!-- &#xC5BC;&#xB7FF;&#xD31D;&#xC5C5; --&#x3E;
+&#x3C;div class=&#x22;popup-wrap alert&#x22; id=&#x22;alert&#x22;&#x3E;
+  &#x3C;div class=&#x22;pop-box&#x22;&#x3E;
+    &#x3C;div class=&#x22;pop-content&#x22;&#x3E;
+      &#x3C;p&#x3E;
+        &#xD68C;&#xC6D0;&#xB2D8;&#xC740; SK&#xB80C;&#xD130;&#xCE74;&#xC5D0;&#x3C;br /&#x3E;
+        &#xC774;&#xBBF8; &#xAC00;&#xC785;&#xD558;&#xC168;&#xC5B4;&#xC694;!
+      &#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+
+    &#x3C;div class=&#x22;alert-btn-box&#x22;&#x3E;
+      &#x3C;button class=&#x22;pop-close cancel&#x22;&#x3E;&#xCDE8;&#xC18C;&#x3C;/button&#x3E;
+      &#x3C;button class=&#x22;pop-close confirm&#x22;&#x3E;&#xD655;&#xC778;&#x3C;/button&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;!-- //&#xC5BC;&#xB7FF;&#xD31D;&#xC5C5; --&#x3E;</code>
+            </pre>
+          </section>
+        </article>
+
+        <!-- quick -->
+        <article class="quick" w3-include-html="./include/quick.html"></article>
+        <!-- //quick -->
+      </main>
+
+      <!-- footer -->
+      <footer w3-include-html="./include/footer.html"></footer>
+      <!-- //footer -->
+    </div>
+  </body>
+
+  <!-- 레이어팝업 -->
+  <div class="popup-wrap w-lg" id="pop-01" style="display: block">
+    <div class="pop-box">
+      <div class="pop-header">
+        <h2><span class="hide-txt">비밀번호 재설정</span></h2>
+        <button class="pop-close btn-close"><span class="hide-txt">팝업닫기</span></button>
+      </div>
+      <!-- 팝업하단버튼영역 -->
+      <div class="pop-footer">
+        <div class="btn-wrap">
+          <div class="btn-box">
+            <button class="btn-gray">gray</button>
+            <button class="btn-primary">primary</button>
+          </div>
+        </div>
+      </div>
+      <!-- //팝업하단버튼영역 -->
+      <!-- 팝업컨텐츠영역 -->
+      <div class="pop-content">
+        팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역팝업<br />컨텐츠<br />영역
+        라스트
+      </div>
+      <!-- //팝업컨텐츠영역 -->
+    </div>
+  </div>
+  <!-- //레이어팝업 -->
+
+  <!-- 메인팝업 -->
+  <div class="popup-wrap pop-main load-pop" id="pop-02">
+    <div class="pop-box">
+      <div class="pop-content"></div>
+
+      <div class="main-btn-box">
+        <button class="btn-today-close"><i class="icon"></i>오늘 하루 보지않기</button>
+        <button class="pop-close">닫기</button>
+      </div>
+    </div>
+  </div>
+  <!-- //메인팝업 -->
+
+  <!-- 얼럿팝업 -->
+  <div class="popup-wrap alert vue" id="alert">
+    <div class="pop-box">
+      <div class="pop-content">
+        <p>
+          회원님은 SK렌터카에<br />
+          이미 가입하셨어요!
+        </p>
+      </div>
+
+      <div class="alert-btn-box">
+        <button class="pop-close cancel">취소</button>
+        <button class="pop-close confirm">확인</button>
+      </div>
+    </div>
+  </div>
+  <!-- //얼럿팝업 -->
+
+  <script src="../../../assets/pc/js/ui.js"></script>
+
+  <script>
+    includeHTML();
+  </script>
+</html>
